@@ -15,9 +15,9 @@ include('partials/header.php');
 			<div class="row">
 				<div class="col-lg-12">
 				  <div class="alert alert-danger" role="alert" id="error" style="display: none;">...</div>
-				  <form id="login-form" name="login_form" role="form" style="display: block;" method="post">
+				  <form action="login_action.php" id="login-form" name="login_form" role="form" style="display: block;" method="post">
 					  <div class="form-group">
-						<input type="email" name="username" id="username" tabindex="1" class="form-control" placeholder="Username" value=""  required>
+						<input type="email" name="email" id="username" tabindex="1" class="form-control" placeholder="Email" value=""  required>
 					  </div>
 					  <div class="form-group">
 						<input type="password" name="password" id="password" tabindex="2" class="form-control" placeholder="Password"> 

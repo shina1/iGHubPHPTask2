@@ -1,5 +1,5 @@
 <?php 
-//session_start();
+// session_start();
 
 require("connect/db_cls_connect.php");
 
@@ -13,7 +13,7 @@ if(isset($_POST['register_button'])){
     $re_psw = $_POST['re_password'];
     $new_pass = crypt($psw,'test');
 
-    $insert = "INSERT INTO `tbl_users` (user, lUserName, email, password) VALUES ('$firstName','$secondName','$email','$new_pass' )";
+    $insert = "INSERT INTO `tb_users` (`fName`,`lName`, `email`, `pswd`) VALUES ('$firstName','$secondName','$email','$new_pass' )";
     
 
     if(empty($_POST["f_name"]) && empty($_POST["l_name"]) && empty($_POST["email"]) && empty($_POST["password"]) && empty($_POST["re_password"])) {
@@ -33,7 +33,7 @@ if(isset($_POST['register_button'])){
              if (mysqli_query($connect,  $insert))
              {
                  echo "<script>alert('Registration Succesful') </script>";
-                 header("Location:index.php")
+                 header("Location:index.php");
              }
              else{
                 echo "something went wrong";

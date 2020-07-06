@@ -1,27 +1,27 @@
 <?php
 //include connection file 
 include_once("../db_cls_connect.php");
-require('recaptcha/src/autoload.php');
-$db = new dbObj();
-$connString =  $db->getConnstring();
+// require('recaptcha/src/autoload.php');
+// $db = new dbObj();
+// $connString =  $db->getConnstring();
 
-$params = $_REQUEST;
-$action = $params['action'] !='' ? $params['action'] : '';
-$empCls = new Employee($connString);
+// $params = $_REQUEST;
+// $action = $params['action'] !='' ? $params['action'] : '';
+// $empCls = new Employee($connString);
 
-switch($action) {
- case 'login':
-	$empCls->login();
- break;
- case 'register':
-	$empCls->register();
- break;
- case 'logout':
-	$empCls->logout();
- break;
- default:
- return;
-}
+// switch($action) {
+//  case 'login':
+// 	$empCls->login();
+//  break;
+//  case 'register':
+// 	$empCls->register();
+//  break;
+//  case 'logout':
+// 	$empCls->logout();
+//  break;
+//  default:
+//  return;
+// }
 
 
 class Employee {
